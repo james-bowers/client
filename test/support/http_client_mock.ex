@@ -4,5 +4,8 @@ defmodule Test.Support.Bowers.HTTPClient do
   @behaviour HTTPClient
 
   @impl HTTPClient
-  def handle(struct = Struct), do: struct
+  def post(_service, _path, _payload), do: :ok
+
+  @impl HTTPClient
+  def get(_service, _path), do: :ok
 end
